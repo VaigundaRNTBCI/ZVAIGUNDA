@@ -1,0 +1,4 @@
+@EndUserText.label: 'Travel Service'
+define service ZVAI_SRV_TRAVEL {
+  expose ZVAI_CDS_Travel;
+}

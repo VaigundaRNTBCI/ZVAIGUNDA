@@ -1,0 +1,29 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Travel'
+annotate entity ZVAI_CDS_Travel
+    with 
+{   
+    @UI.lineItem: [{ position: 10 , label: 'Travel ID Core' }]
+    @UI.selectionField: [{ position: 10 }]
+    TravelId;
+    @UI.lineItem: [{ position: 20 , label: 'Agency ID Core' }]
+    @UI.selectionField: [{ position: 20 }]
+    AgencyId;
+    @UI.lineItem: [{ position: 30 , label: 'Customer ID Core' }]
+    CustomerId;
+    @UI.lineItem: [{ position: 40 , label: 'Start date Core' }]
+    BeginDate;
+     @UI.lineItem: [{ position: 50 , label: 'End date Core' }]
+    EndDate;
+     @UI.lineItem: [{ position: 60 , label: 'Booking date Core' }]
+    BookingFee;
+    @UI.lineItem: [{ position: 70 , label: 'Price Core' }]
+    TotalPrice;
+    @UI.lineItem: [{ position: 80 , label: 'Currency Core' }]
+    CurrencyCode;
+    @UI.lineItem: [{ position: 90 , label: 'Decription Core' }]
+    Description;
+    @UI.lineItem: [{ position: 100 , label: 'Status Core' }]
+    @UI.selectionField: [{ position: 30 }]
+    Status;
+}

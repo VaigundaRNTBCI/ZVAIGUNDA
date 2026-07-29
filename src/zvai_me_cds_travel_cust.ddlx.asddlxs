@@ -1,0 +1,15 @@
+@Metadata.layer: #CUSTOMER
+@EndUserText.label: 'Travel'
+annotate entity ZVAI_CDS_Travel
+    with 
+{   
+    @UI.lineItem: [{ position: 10 , label: 'Travel ID Cust' }]
+    @UI.selectionField: [{ position: 10 }]
+    TravelId;
+    @UI.lineItem: [{ position: 20 , label: 'Agency ID Cust' }]
+    @UI.selectionField: [{ position: 20 }]
+    AgencyId;
+    @UI.lineItem: [{ position: 30 , label: 'Customer ID Cust' }]
+    CustomerId;
+
+}
