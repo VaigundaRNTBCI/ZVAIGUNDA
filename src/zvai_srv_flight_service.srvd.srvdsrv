@@ -1,0 +1,5 @@
+@EndUserText.label: 'Flight Service'
+define service Zvai_srv_flight_service {
+  expose ZVAI_CDS_Connection;
+  expose zvai_cds_flight_r;
+}
