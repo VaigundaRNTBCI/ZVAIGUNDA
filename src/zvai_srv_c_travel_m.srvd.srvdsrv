@@ -1,0 +1,6 @@
+@EndUserText.label: 'Travel Service Managed'
+define service ZVAI_SRV_c_TRAVEL_m {
+  expose zvai_c_travel_m;
+  expose zvai_c_booking_m;
+  expose zvai_c_booking_suppl_m;
+}
