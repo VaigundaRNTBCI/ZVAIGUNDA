@@ -17,6 +17,8 @@ define view entity zvai_i_booking_suppl_m
       @Semantics.amount.currencyCode: 'CurrencyCode'
       price                 as Price,
       currency_code         as CurrencyCode,
+      // the presistent field last_changed_at plays special role as a filed ETag. The field is updated by the application when a record is created or changed.
+      @Semantics.systemDateTime.localInstanceLastChangedAt: true
       last_changed_at       as LastChangedAt,
       _Travel,
       _Booking,

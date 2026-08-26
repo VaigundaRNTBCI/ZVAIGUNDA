@@ -23,6 +23,8 @@ define view entity zvai_i_booking_m
       flight_price    as FlightPrice,
       currency_code   as CurrencyCode,
       booking_status  as BookingStatus,
+       // the presistent field last_changed_at plays special role as a filed ETag.
+      @Semantics.systemDateTime.localInstanceLastChangedAt: true
       last_changed_at as LastChangedAt,
       _BookingSuppl,
       _Travel,

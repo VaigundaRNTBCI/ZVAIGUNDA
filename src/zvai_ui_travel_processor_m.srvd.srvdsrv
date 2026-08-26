@@ -1,0 +1,18 @@
+@EndUserText.label: 'Travel Service UI - BAS'
+define service Zvai_ui_travel_processor_m {
+  expose ZVAI_C_TRAVEL_M_BAS          as Travel;
+  expose ZVAI_C_BOOKING_M_BAS         as Booking;
+  expose ZVAI_C_BOOKING_SUPPL_M_BAS   as BookingSupplement;
+  expose /DMO/I_Supplement_StdVH      as Supplement;
+  expose /DMO/I_SupplementCategory_VH as SupplementCategory;
+  expose /DMO/I_Customer_StdVH        as Passenger;
+  expose /DMO/I_Agency_StdVH          as TravelAgency;
+  expose /DMO/I_Carrier_StdVH         as Airline;
+  expose /DMO/I_Connection_StdVH      as FlightConnection;
+  expose /DMO/I_Flight_StdVH          as Flight;
+  expose /DMO/I_Airport_StdVH         as Airport;
+  expose /DMO/I_Overall_Status_VH     as OverallStatus;
+  expose /DMO/I_Booking_Status_VH     as BookingStatus;
+  expose I_CurrencyStdVH              as currency;
+  expose I_CountryVH                  as country;
+}

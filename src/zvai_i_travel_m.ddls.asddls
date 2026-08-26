@@ -23,8 +23,10 @@ association [0..1] to /DMO/I_Overall_Status_VH as _Status on $projection.Overall
     description as Description,
     overall_status as OverallStatus,
     created_by as CreatedBy,
-    created_at as CreatedAt,
+    created_at as CreatedAt,    
     last_changed_by as LastChangedBy,
+     // the presistent field last_changed_at plays special role as a filed ETag.
+    @Semantics.systemDateTime.localInstanceLastChangedAt: true
     last_changed_at as LastChangedAt,
     _Booking,
     _Agency,

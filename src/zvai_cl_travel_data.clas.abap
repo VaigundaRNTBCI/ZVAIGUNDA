@@ -11,7 +11,8 @@ ENDCLASS.
 
 
 
-CLASS zvai_cl_travel_data IMPLEMENTATION.
+CLASS ZVAI_CL_TRAVEL_DATA IMPLEMENTATION.
+
 
  METHOD if_oo_adt_classrun~main.
 	
@@ -38,5 +39,4 @@ CLASS zvai_cl_travel_data IMPLEMENTATION.
    out->write( 'Tables loaded successfully.' ).
 
   ENDMETHOD.
-
 ENDCLASS.

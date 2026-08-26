@@ -2,7 +2,7 @@
 @Search.searchable: true
 @UI.headerInfo: { typeName: 'Travel',
                   typeNamePlural: 'Travels',
-                  title: { type: #STANDARD, value: 'TravelId' } }
+                  title: { type: #STANDARD, label: 'Travel', value: 'TravelId' } }
 annotate view zvai_c_travel_m with
 {
   @UI.facet: [{ id: 'Travel' ,
@@ -10,14 +10,17 @@ annotate view zvai_c_travel_m with
                 position: 10,
                 type: #IDENTIFICATION_REFERENCE,
                 label: 'Travel' },
-                { id: 'Booking' ,
-				  purpose: #STANDARD ,
-				  position: 20, 
-				  type: #LINEITEM_REFERENCE,
-				  label: 'Booking',
-				  targetElement: '_Booking' }]
+              { id: 'Booking' ,
+          		purpose: #STANDARD ,
+          		position: 20,
+          		type: #LINEITEM_REFERENCE,
+          		label: 'Booking',
+          		targetElement: '_Booking' }]
 
-  @UI.lineItem: [{position: 10, label: 'Travel ID'}]
+  @UI: { lineItem: [{position: 10, label: 'Travel ID'}],
+   identification: [{position: 10, label: 'Travel ID' }]
+    }
+  @Search.defaultSearchElement: true
   TravelId;
 
   @UI: { lineItem: [{position: 11, label: 'Agent'}],
@@ -64,7 +67,10 @@ annotate view zvai_c_travel_m with
   }
   TotalPrice;
 
-  @UI.identification: [{position: 70, label: 'Currency'}]
+  @Consumption.valueHelpDefinition: [ {
+  								entity: { name :'i_currency',
+  										  element: 'Currency' }
+  					   }]
   CurrencyCode;
 
   @UI: {

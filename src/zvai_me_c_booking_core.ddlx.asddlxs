@@ -2,7 +2,7 @@
 @Search.searchable: true
 @UI.headerInfo: { typeName: 'Booking',
                   typeNamePlural: 'Bookings' ,
-                  title: { type: #STANDARD, value: 'BookingId' }
+                  title: { type: #STANDARD, label : 'Booking', value: 'BookingId' }
                  }
 annotate entity zvai_c_booking_m with
 {
@@ -45,7 +45,7 @@ annotate entity zvai_c_booking_m with
    identification: [ { position: 40 } ]
    }
   @Consumption.valueHelpDefinition:[{
-  entity :{ name: '/dmo/i_carrier', element: 'CarrierId' }
+  entity :{ name: '/dmo/i_carrier', element: 'AirlineID' }
   					  }]
   @Search.defaultSearchElement: true
   CarrierId;
@@ -54,8 +54,8 @@ annotate entity zvai_c_booking_m with
    identification: [ { position: 50 } ]
    }
   @Consumption.valueHelpDefinition:[{
-      entity :{ name: '/dmo/i_flight', element: 'ConnectionId' },
-      additionalBinding : [ { element : 'ConnectionId' ,
+      entity :{ name: '/dmo/i_flight', element: 'ConnectionID' },
+      additionalBinding : [ { element : 'ConnectionID' ,
                             localElement: 'ConnectionId' },
                             { element : 'AirlineID' ,
                             localElement: 'CarrierId' } ,

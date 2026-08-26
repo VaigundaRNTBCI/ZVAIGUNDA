@@ -43,7 +43,7 @@ annotate entity zvai_c_booking_suppl_m with
 
   @Consumption.valueHelpDefinition: [{
            entity : { name: 'I_Currency',
-                      element: 'CurrencyCode'
+                      element: 'Currency'
                      }
                   }]
   CurrencyCode;
